@@ -1,0 +1,11 @@
+[Unit]
+Description=Update DDNS address
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python update_ddns.py
+
+[Install]
+WantedBy=default.target
